@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/chord_recognition/static/css/main.57fa2f4f.chunk.css",
+    "main.js": "/chord_recognition/static/js/main.bfd681d7.chunk.js",
+    "main.js.map": "/chord_recognition/static/js/main.bfd681d7.chunk.js.map",
+    "runtime-main.js": "/chord_recognition/static/js/runtime-main.b4ded10f.js",
+    "runtime-main.js.map": "/chord_recognition/static/js/runtime-main.b4ded10f.js.map",
+    "static/js/2.6210c739.chunk.js": "/chord_recognition/static/js/2.6210c739.chunk.js",
+    "static/js/2.6210c739.chunk.js.map": "/chord_recognition/static/js/2.6210c739.chunk.js.map",
+    "index.html": "/chord_recognition/index.html",
+    "precache-manifest.e426ca195e9b38566e85ca773b54b1de.js": "/chord_recognition/precache-manifest.e426ca195e9b38566e85ca773b54b1de.js",
+    "service-worker.js": "/chord_recognition/service-worker.js",
+    "static/css/main.57fa2f4f.chunk.css.map": "/chord_recognition/static/css/main.57fa2f4f.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4ded10f.js",
+    "static/js/2.6210c739.chunk.js",
+    "static/css/main.57fa2f4f.chunk.css",
+    "static/js/main.bfd681d7.chunk.js"
+  ]
+}
