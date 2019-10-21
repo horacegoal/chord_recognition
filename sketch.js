@@ -1,5 +1,7 @@
 
 let synth;
+// 55
+let blackKeyOffSet = 55;
 
 let inputValue;
 let notesArr;
@@ -63,21 +65,22 @@ function draw() {
     // }
     fill('black');
     fillColor(['C#', 'Db'], notesArr);
-    rect(55,0,blackKeyWidth,blackKeyLength)
+    rect(blackKeyOffSet,0,blackKeyWidth,blackKeyLength)
     fill('black');
     fillColor(['D#', 'Eb'], notesArr);
-    rect(whiteKeyWidth+55,0,blackKeyWidth,blackKeyLength)
+    rect(whiteKeyWidth+blackKeyOffSet,0,blackKeyWidth,blackKeyLength)
     fill('black');
     fillColor(['F#', 'Gb'], notesArr);
-    rect(whiteKeyWidth*3+55,0,blackKeyWidth,blackKeyLength)
+    rect(whiteKeyWidth*3+blackKeyOffSet,0,blackKeyWidth,blackKeyLength)
     fill('black');
     fillColor(['G#', 'Ab'], notesArr);
-    rect(whiteKeyWidth*4+55,0,blackKeyWidth,blackKeyLength)
+    rect(whiteKeyWidth*4+blackKeyOffSet,0,blackKeyWidth,blackKeyLength)
     fill('black');
     fillColor(['A#', 'Bb'], notesArr);
-    rect(whiteKeyWidth*5+55,0,blackKeyWidth,blackKeyLength)
+    rect(whiteKeyWidth*5+blackKeyOffSet,0,blackKeyWidth,blackKeyLength)
 
 }
+
 
 function fillColor(note, arr){
    
@@ -343,16 +346,18 @@ function mousePressed(){
         }
     }
 }
-
+////35
 function changeScale(x) {
     if (x.matches) { // If media query matches
       scale = 20;
+      blackKeyOffSet = 30;
       whiteKeyLength = 14.7 * scale;
       whiteKeyWidth = 2.1 * scale;
       blackKeyLength = 9.7 * scale;
       blackKeyWidth = 1.1 * scale;
     } else {
       scale = 35;
+      blackKeyOffSet = 55;
     }
   }
   
