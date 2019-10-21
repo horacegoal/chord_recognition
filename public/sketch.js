@@ -201,7 +201,7 @@ function mousePressed(){
         }
     }else if(mouseY >= 0 && mouseY <= blackKeyLength){
         switch(true){
-            case (mouseX >= 0 && mouseX < 55):
+            case (mouseX >= 0 && mouseX < blackKeyOffSet):
                 if(!notesArr.includes('C')){
                     inputValue += 'C';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -211,7 +211,7 @@ function mousePressed(){
                     synth.triggerAttackRelease("C4", "8n");
                 }
                 break;
-            case (mouseX >= 0 && mouseX < 55 + blackKeyWidth):
+            case (mouseX >= 0 && mouseX < blackKeyOffSet + blackKeyWidth):
                 if(!notesArr.includes('C#')){
                     inputValue += 'C#';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -222,7 +222,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth + 55):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth + blackKeyOffSet):
                 if(!notesArr.includes('D')){
                     inputValue += 'D';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -233,7 +233,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth + 55 + blackKeyWidth):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth + blackKeyOffSet + blackKeyWidth):
                 if(!notesArr.includes('D#')){
                     inputValue += 'D#';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -255,7 +255,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth * 3 + 55):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth * 3 + blackKeyOffSet):
                 if(!notesArr.includes('F')){
                     inputValue += 'F';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -266,7 +266,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth * 3 + 55 + blackKeyWidth):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth * 3 + blackKeyOffSet + blackKeyWidth):
                 if(!notesArr.includes('F#')){
                     inputValue += 'F#';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -277,7 +277,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth * 4 + 55):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth * 4 + blackKeyOffSet):
                 if(!notesArr.includes('G')){
                     inputValue += 'G';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -288,7 +288,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth * 4 + 55 + blackKeyWidth):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth * 4 + blackKeyOffSet + blackKeyWidth):
                 if(!notesArr.includes('G#')){
                     inputValue += 'G#';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -299,7 +299,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth * 5 + 55):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth * 5 + blackKeyOffSet):
                 if(!notesArr.includes('A')){
                     inputValue += 'A';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
@@ -310,7 +310,7 @@ function mousePressed(){
                 }
                 break;
 
-            case (mouseX >= 0 && mouseX < whiteKeyWidth * 5 + 55 + blackKeyWidth):
+            case (mouseX >= 0 && mouseX < whiteKeyWidth * 5 + blackKeyOffSet + blackKeyWidth):
                 if(!notesArr.includes('A#')){
                     inputValue += 'A#';
                     let nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
