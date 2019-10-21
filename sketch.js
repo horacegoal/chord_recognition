@@ -356,6 +356,6 @@ function changeScale(x) {
     }
   }
   
-  let x = window.matchMedia("(max-width: 375px)")
+  let x = window.matchMedia("(max-width: 500px)")
   changeScale(x) // Call listener function at run time
   x.addListener(changeScale) // Attach listener function on state changes
