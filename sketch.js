@@ -7,11 +7,11 @@ function setup() {
     createCanvas(whiteKeyWidth*7, whiteKeyLength);
     synth = new Tone.Synth().toMaster();
 }
-
-let whiteKeyLength = 14.7 * 35;
-let whiteKeyWidth = 2.1 * 35;
-let blackKeyLength = 9.7 * 35;
-let blackKeyWidth = 1.1 * 35;
+let scale = 35;
+let whiteKeyLength = 14.7 * scale;
+let whiteKeyWidth = 2.1 * scale;
+let blackKeyLength = 9.7 * scale;
+let blackKeyWidth = 1.1 * scale;
 let rule = /([CDEFGAB][#b])|[CDEFGAB]/g;
 
 function draw() {
@@ -343,3 +343,19 @@ function mousePressed(){
         }
     }
 }
+
+function changeScale(x) {
+    if (x.matches) { // If media query matches
+      scale = 20;
+      whiteKeyLength = 14.7 * scale;
+      whiteKeyWidth = 2.1 * scale;
+      blackKeyLength = 9.7 * scale;
+      blackKeyWidth = 1.1 * scale;
+    } else {
+      scale = 35;
+    }
+  }
+  
+  let x = window.matchMedia("(max-width: 375px)")
+  changeScale(x) // Call listener function at run time
+  x.addListener(changeScale) // Attach listener function on state changes
