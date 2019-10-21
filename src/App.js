@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import NotesForm from './NotesForm';
+import CheckChord from './CheckChord';
+import Result from './Result';
 import './App.css';
 
-function App() {
-  return (
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        inputValue: '',
+        chords: []
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    
+  }
+  handleChange(e){
+        
+    this.setState({
+        inputValue: e.target.value
+    }, () => {
+        this.checkChord = new CheckChord(this.state.inputValue);
+        this.chords = this.checkChord.findChord();
+        this.setState({
+          chords: this.chords
+        })
+    })  
+  }
+
+  render(){
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NotesForm method={this.handleChange}/>
+      <Result chords={this.chords}/>
     </div>
-  );
+    );
+  }
 }
+
+
 
 export default App;
